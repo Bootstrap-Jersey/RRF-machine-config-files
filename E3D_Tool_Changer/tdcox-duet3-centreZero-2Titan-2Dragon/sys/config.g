@@ -142,8 +142,8 @@ M593 F50								; cancel ringing at 50Hz (https://forum.e3d-online.com/threads/a
 M376 H15								; bed compensation taper
 
 ; Bowden tubes are ~700mm long so PA on the Bowden tools almost certainly needs to be increased
-;M572 D0 S0.2 Not with Volumetric? 							; pressure advance T0
-;M572 D1 S0.2 							; pressure advance T1
+M572 D0 S0.2  							; pressure advance T0
+M572 D1 S0.2 							; pressure advance T1
 ; M572 D2 S0.05 							; pressure advance T2
 ; M572 D3 S0.05 							; pressure advance T3
 

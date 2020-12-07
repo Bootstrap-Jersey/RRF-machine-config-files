@@ -8,4 +8,4 @@ if state.currentTool = -1
 else 
     ; Raise wiper
     G90
-    G1 U{ 14.8 - tools[state.currentTool].offsets[2] } F10000
+    G1 U{ 13.5 - tools[state.currentTool].offsets[2] } F10000

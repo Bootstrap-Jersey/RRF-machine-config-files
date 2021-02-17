@@ -2,7 +2,7 @@ if state.currentTool = -1 abort "No tool selected"
 
 M291 P"Please wait while the nozzle is being heated up" R"Unloading Tool " ^ {state.currentTool} T5 ; Display message
 
-G10 S100 											; Heat up the current tool to 100C
+G10 S120 											; Heat up the current tool to 120C
 M116 P{state.currentTool}							; Wait for the temperatures to be reached
 
 M291 P"Retracting filament..." R"Unloading Tool " ^ {state.currentTool} T5 	; Display another message

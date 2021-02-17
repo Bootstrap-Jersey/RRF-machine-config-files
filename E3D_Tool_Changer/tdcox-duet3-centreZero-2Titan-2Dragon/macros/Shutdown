@@ -1,0 +1,2 @@
+; Shutdown SBC cleanly via execonmcode
+M7722

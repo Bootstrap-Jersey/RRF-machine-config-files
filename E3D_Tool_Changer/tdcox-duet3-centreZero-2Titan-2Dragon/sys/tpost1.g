@@ -10,10 +10,11 @@ M98 P"todripzone.g"
 ;heatup
 M116 P1
 
-; Raise wiper
-G1 U28 F10000
+; if heat.heaters[tools[1].heaters[0]].current >= heat.coldExtrudeTemperature
 
-;prime nozzle
-M98 P"prime.g"
-
+; Prime if heater is active
+if heat.heaters[tools[1].heaters[0]].active > 0
+    ;prime nozzle
+    M98 P"prime.g"
+    
 M106 R1	; restore print cooling fan speed

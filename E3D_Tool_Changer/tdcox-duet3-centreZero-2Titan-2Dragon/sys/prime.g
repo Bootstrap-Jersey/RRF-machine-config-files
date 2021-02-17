@@ -2,7 +2,7 @@
 M98 P"todripzone.g"
 M98 P"raisewiper.g"
 
-M116 P{state.currentTool}   ; Wait for tool to reach temp
+; M116 P{state.currentTool}   ; Wait for tool to reach temp
 
 ;brush in
 G1 X-172 Y10 F12000
@@ -12,14 +12,16 @@ G1 Y10
 
 ;Prime
 G92 E0
-G1 E10 F200
+G1 E20 F400
 G1 F50
-G1 E5 F50
-G1 E-0.25 F200
+G1 E1 F50
+G1 E-0.25 F400
 G92 E0
-;G4 S2
+M400
+;G4 S3   ; Wait for pressure to equalise
 
 ;Run Out
+G1 Y-10 F50000
 G1 X-177 Y70 F50000
 G1 Y10 F50000
 

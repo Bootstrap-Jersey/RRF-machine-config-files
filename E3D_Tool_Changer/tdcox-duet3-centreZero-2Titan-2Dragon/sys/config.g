@@ -119,13 +119,13 @@ M106 P4 S0								; T1 PCF
 
 ; Tools
 M563 P0 S"T0" D0 H1 F2 					; Define tool 0
-;G10 P0 X-9 Y40 Z-13.2 					; Set offset
-G10 P0 X-9 Y40 Z-13.95 					; Set offset
+G10 P0 X-7.4 Y39.75 Z-13.05				; Set offset
+;G10 P0 X-9 Y40 Z-13.95 				; Set offset
 G10 P0 R0 S0 							; Reset initial tool 0 active and standby temperatures to 0C
 
 M563 P1 S"T1" D1 H2 F4 					; Define tool 1
-;G10 P1 X-9.08 Y40.05 Z-13.15			; Set offset
-G10 P1 X-9.08 Y40.05 Z-13.9 			; Set offset
+G10 P1 X-7.5 Y39.9 Z-12.91  			; Set offset
+;G10 P1 X-9.08 Y40.05 Z-13.9 			; Set offset
 G10 P1 R0 S0 							; Reset initial tool 1 active and standby temperatures to 0C
 
 ; M563 P2 S"T2" D2 H3 F6 					; Define tool 2
@@ -143,7 +143,7 @@ M376 H15								; bed compensation taper
 
 ; Bowden tubes are ~700mm long so PA on the Bowden tools almost certainly needs to be increased
 M572 D0 S0.2  							; pressure advance T0
-M572 D1 S0.2 							; pressure advance T1
+M572 D1 S0.4 							; pressure advance T1
 ; M572 D2 S0.05 							; pressure advance T2
 ; M572 D3 S0.05 							; pressure advance T3
 

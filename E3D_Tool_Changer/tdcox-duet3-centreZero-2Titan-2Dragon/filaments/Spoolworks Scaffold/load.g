@@ -1,10 +1,10 @@
 M98 P"todripzone.g"								; Park head
 
-M291 P"Please wait while the nozzle is being heated up" R"Loading PLA" T5 	; Display message
+M291 P"Please wait while the nozzle is being heated up" R"Loading Spoolworks Scaffold" T5 	; Display message
 
-G10 S200 										; Set current tool temperature to 200C
+G10 S215 										; Set current tool temperature to 215C
 M116 P{state.currentTool}						; Wait for the temperatures to be reached
-M291 P"Feeding filament..." R"Loading PLA" T5 	; Display new message
+M291 P"Feeding filament..." R"Loading Spoolworks Scaffold" T5 	; Display new message
 M83 											; Extruder to relative mode
 G1 E10 F600 									; Feed 10mm of filament at 600mm/min
 G1 E800 F3000 									; Feed 800mm of filament at 3000mm/min

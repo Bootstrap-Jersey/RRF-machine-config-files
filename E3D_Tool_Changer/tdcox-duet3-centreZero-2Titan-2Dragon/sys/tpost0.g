@@ -10,7 +10,10 @@ M98 P"todripzone.g"
 ;heatup
 M116 P0
 
-if heat.heaters[tools[0].heaters[0]].current >= heat.coldExtrudeTemperature
+; if heat.heaters[tools[0].heaters[0]].current >= heat.coldExtrudeTemperature
+
+; Prime if heater is active
+if heat.heaters[tools[0].heaters[0]].active > 0
     ;prime nozzle
     M98 P"prime.g"
 
